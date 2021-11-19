@@ -3,7 +3,7 @@ SELECT tv_genres.name
 FROM tv_genres
 WHERE tv_genres.name NOT IN
       (SELECT a.name AS name
-      FROM tv_genres AS
+      FROM tv_genres AS a
       JOIN tv_show_genres AS b
       ON b.genre_id = a.id
       JOIN tv_shows AS c
